@@ -31,6 +31,7 @@ const advertizer = {
         advertizer.customColorInput.addEventListener('input', advertizer.changeTextColor);
     },
 
+    // Rajoute un caractère au texte
     addLetter: function(event) {
         const screen = document.querySelector(".text");
         let screentext = screen.textContent;
@@ -46,6 +47,7 @@ const advertizer = {
         screen.textContent = screentext;
     },
 
+    // Enlève le dernier caractère du texte
     removeLetter: function(event) {
         const screen = document.querySelector(".text");
         let screentext = screen.textContent;
@@ -55,6 +57,7 @@ const advertizer = {
         screen.textContent = screentext;
     },
 
+    // Rajoute un espace au texte
     addSpace: function(event) {
         const screen = document.querySelector(".text");
         let screentext = screen.textContent;
@@ -67,7 +70,7 @@ const advertizer = {
     toggleUpperCase() {
         advertizer.isUpperCase = !advertizer.isUpperCase;
 
-        // Parcourez les boutons et ajoutez ou retirez la classe "pressed" en fonction de l'état des majuscules
+        // Parcourez les boutons et ajoutez ou retirez la classe "upper" en fonction de l'état des majuscules
         for (const key of advertizer.keyList) {
             if (advertizer.isUpperCase) {
             key.classList.add('upper');
@@ -83,6 +86,7 @@ const advertizer = {
         }
     },
 
+    // Méthode pour changer la couleur du texte
     changeTextColor: function() {
         const colorValue = advertizer.customColorInput.value;
         const screen = document.querySelector(".text");
